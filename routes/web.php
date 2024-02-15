@@ -31,3 +31,7 @@ Route::get('/comics/{comic}/edit', [GuestFumettiController::class, 'edit'])->nam
 
 // Route per salvare le modifiche di un fumetto nel database
 Route::put('/comics/{comic}', [GuestFumettiController::class, 'update'])->name('guest.comics.update');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
